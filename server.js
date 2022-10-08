@@ -7,8 +7,8 @@ app.use(express.urlencoded({ extended: true }));
 const { productsRouter } = require("./router/products.routes");
 const { cartRouter } = require("./router/cart.routes");
 
-app.use("/api/v1/productos", productsRouter);
-app.use("/api/v1/cart", cartRouter);
+app.use("/api/productos", productsRouter);
+app.use("/api/carrito", cartRouter);
 
 app.use("*", (req, res, next) => {
     res.status(404).json({
